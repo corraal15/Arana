@@ -11,8 +11,6 @@ public class Main {
 
         // Variables para estadísticas
         int distanciaRecorrida = 0;
-        int metrosSubidos = 0;
-        int metrosBajados = 0;
         boolean encontroComida = false;
 
         System.out.println("\nLa valiente araña " + nombre + " inicia su viaje en el aula de ASIR 1.");
@@ -25,7 +23,6 @@ public class Main {
         int decision1 = scanner.nextInt();
 
         if (decision1 == 1) {
-            metrosSubidos += 2;
             distanciaRecorrida += 2;
             System.out.println("\n" + nombre + " sube ágilmente por la pared y observa todo desde arriba.");
         } else {
@@ -45,7 +42,6 @@ public class Main {
             encontroComida = true;
             System.out.println("\nDentro de la mochila, " + nombre + " encuentra una galleta olvidada.");
         } else {
-            metrosBajados += 1;
             distanciaRecorrida += 1;
             System.out.println("\n" + nombre + " se esconde bajo una silla, evitando las miradas curiosas.");
         }
@@ -60,7 +56,6 @@ public class Main {
         String finalHistoria = "";
 
         if (decision3 == 1) {
-            metrosSubidos += 1;
             distanciaRecorrida += 1;
             if (decision1 == 1 && decision2 == 1) {
                 finalHistoria = nombre + " trepa hasta la mesa del profesor con su tesoro de galleta, pero un estudiante lo descubre y lo expulsa fuera del aula.";
@@ -83,9 +78,7 @@ public class Main {
         // Resumen de estadísticas
         System.out.println("\n=== ESTADÍSTICAS DE " + nombre.toUpperCase() + " ===");
         System.out.println("Distancia total recorrida: " + distanciaRecorrida + " metros.");
-        System.out.println("Metros subidos: " + metrosSubidos);
-        System.out.println("Metros bajados: " + metrosBajados);
-        System.out.println("¿Encontró comida?: " + (encontroComida ? "Sí" : "No"));
+        System.out.println("¿Sobrevive?: " + (encontroComida ? "Sí" : "No"));
 
         scanner.close();
     }
