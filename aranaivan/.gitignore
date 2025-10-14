@@ -13,6 +13,9 @@ out/
 .springBeans
 .sts4-cache
 bin/
+.idea
+aranaivan.iml
+.gitignore
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
