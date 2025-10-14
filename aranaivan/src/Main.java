@@ -21,7 +21,9 @@ public class Main {
         System.out.println("\n(1) Subir por la pared hasta el techo.");
         System.out.println("(2) Caminar por el suelo hacia la mesa del profesor.");
         System.out.print("Elige (1 o 2): ");
-        int d1 = scanner.nextInt();
+        int d1=0;
+
+        d1 = scanner.nextInt();
         decisionesTomadas++;
 
         if (d1 == 1) {
@@ -93,7 +95,7 @@ public class Main {
                 }
             }
 
-        } else { // d1 == 2
+        } else if (d1==2) { // d1 == 2
             distanciaRecorrida += 3;
             System.out.println("\n" + nombre + " avanza por el suelo, esquivando mochilas.");
 
@@ -159,3 +161,4 @@ public class Main {
         scanner.close();
     }
 }
+
